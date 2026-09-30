@@ -1,7 +1,7 @@
 import re
 from bbot.modules.base import BaseModule
 
-
+#TODO NLC add reddit? bluesky? mastadon?
 class social(BaseModule):
     watched_events = ["URL_UNVERIFIED"]
     produced_events = ["SOCIAL"]

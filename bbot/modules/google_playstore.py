@@ -1,5 +1,8 @@
 from bbot.modules.base import BaseModule
-
+#TODO NLC: make this also scan app creator for more apps?
+#TODO NLC: extract emails from here
+#todo nlc: company name? address? phone number? non org emails?
+#todo nlc: domains? overall, what if a new domain that we arent sure if ours is found? see wheresmydrink support email @redfoundry.com
 
 class google_playstore(BaseModule):
     watched_events = ["ORG_STUB", "CODE_REPOSITORY"]
