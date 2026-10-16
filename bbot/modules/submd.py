@@ -1,4 +1,5 @@
 from bbot.modules.templates.subdomain_enum import subdomain_enum
+from bbot.core.config.models import BaseModuleConfig, Field
 
 
 class submd(subdomain_enum):
@@ -11,8 +12,9 @@ class submd(subdomain_enum):
         "author": "@SystemNatalie",
         "auth_required": False,
     }
-    options = {"api_key": ""}
-    options_desc = {"api_key": "sub.md API key (optional)"}
+
+    class Config(BaseModuleConfig):
+        api_key: str = Field("", description="sub.md API key (optional)", sensitive=True)
 
     base_url = "https://api.sub.md/v1/search"
     reject_wildcards = False
